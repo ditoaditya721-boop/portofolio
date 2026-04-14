@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" role="img" aria-label="Placeholder avatar">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b2647" />
+      <stop offset="100%" stop-color="#304772" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c8cff" />
+      <stop offset="100%" stop-color="#72ddff" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="900" rx="42" fill="url(#bg)" />
+  <circle cx="400" cy="305" r="132" fill="#edf2ff" opacity="0.95" />
+  <path d="M210 760c26-136 120-214 190-214s164 78 190 214" fill="#edf2ff" opacity="0.95" />
+  <circle cx="645" cy="140" r="88" fill="url(#accent)" opacity="0.22" />
+  <text x="400" y="840" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="54" font-weight="700">Portfolio Avatar</text>
+</svg>
