@@ -1,147 +1,154 @@
 <!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dito Aditya Pratama | Portfolio 01</title>
-    <meta name="description" content="Portofolio Dito Aditya Pratama dalam Portfolio Hub." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body class="page-portfolio theme-1">
-    <div class="page-glow glow-one"></div>
-    <div class="page-glow glow-two"></div>
-    <header class="site-header" id="top">
-      <nav class="navbar container">
-        <a href="index.html" class="logo">PORTFOLIO 01</a>
-        <div class="nav-actions">
-          <button class="theme-toggle" type="button" aria-label="Toggle theme"><span class="theme-toggle__sun">Light</span><span class="theme-toggle__moon">Dark</span></button>
-          <button class="nav-toggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
-        </div>
-        <div class="nav-menu" id="nav-menu">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Hub | Creative Developer</title>
+  <meta name="description" content="Portfolio Creative Developer modern dengan about, skills, projects, dan contact.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body data-page="portfolio">
+  <div class="loading-screen" aria-hidden="true">
+    <div class="loader-ring"></div>
+    <p>Loading Creative Developer</p>
+  </div>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark"></span>
+          <span>Portfolio Hub</span>
+        </a>
+
+        <nav class="site-nav">
+          <a href="#home" class="active">Home</a>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
-          <a href="index.html">Back Home</a>
-        </div>
-      </nav>
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="theme-toggle-track">
+            <span class="theme-toggle-thumb"></span>
+          </span>
+        </button>
+      </div>
     </header>
+
     <main>
-      <section class="hero section">
-        <div class="container hero-grid">
-          <div class="hero-content reveal">
-            <span class="eyebrow">Portfolio 01</span>
-            <h1>Dito Aditya Pratama <span class="accent">Desainer Profesional</span></h1>
-            <p class="typing-line">I create <span data-typing="visual branding,creative campaign design,modern digital content"></span></p>
-            <p class="hero-description">Saya membantu brand, bisnis, dan personal brand menghadirkan visual yang modern, rapi, dan profesional melalui pendekatan desain yang komunikatif dan berkarakter.</p>
+      <section id="home" class="portfolio-hero section">
+        <div class="container portfolio-hero-grid">
+          <div class="reveal">
+            <p class="eyebrow">Portfolio 5</p>
+            <h1>Creative Developer</h1>
+            <p class="hero-text">
+              Menggabungkan motion, interaction, dan teknologi frontend untuk membuat pengalaman digital yang ekspresif namun tetap usable.
+            </p>
             <div class="hero-actions">
-              <a href="https://example.com/cv-dito-aditya-pratama.pdf" class="btn btn-primary" target="_blank" rel="noreferrer">Download CV</a>
-              <a href="#contact" class="btn btn-secondary">Contact Me</a>
-            </div>
-            <div class="hero-metrics">
-              <div><strong>5+</strong><span>Tahun Pengalaman</span></div>
-              <div><strong>36</strong><span>Project Selesai</span></div>
-              <div><strong>18</strong><span>Klien Ditangani</span></div>
+              <a class="btn btn-primary" href="#projects">See Projects</a>
+              <a class="btn btn-secondary" href="../index.html">Back to Hub</a>
             </div>
           </div>
-          <div class="hero-card reveal">
-            <div class="hero-card-inner">
-              <div class="hero-badge">Available for freelance</div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Bahlil_Lahadalia_Official_Portrait.png/250px-Bahlil_Lahadalia_Official_Portrait.png" alt="Dito Aditya Pratama" />
-              <div class="hero-card-text">
-                <h2>Visual yang kuat membangun kesan pertama.</h2>
-                <p>Fokus pada estetika, konsistensi, dan komunikasi visual yang membantu brand tampil lebih meyakinkan.</p>
-              </div>
-            </div>
+
+          <aside class="glass-card summary-card reveal reveal-delay-1">
+            <p class="mini-label">Focus</p>
+            <ul class="chip-list">
+              <li>Interactive UI</li>
+              <li>Motion Concepts</li>
+              <li>Immersive Storytelling</li>
+              <li>Frontend Experiments</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container two-column">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About Me</p>
+            <h2>Bridging aesthetics and implementation</h2>
+          </div>
+          <div class="content-card glass-card reveal reveal-delay-1">
+            <p>
+              Saya berada di persimpangan design dan development, dengan perhatian besar pada detail interaksi, ritme motion, dan presentasi.
+              Tujuannya adalah membuat produk terasa hidup tanpa mengorbankan performa atau kejelasan.
+            </p>
           </div>
         </div>
       </section>
-      <section class="section" id="about">
-        <div class="container section-heading reveal">
-          <span class="eyebrow">About Me</span>
-          <h2>Menggabungkan estetika visual, identitas brand, dan detail eksekusi.</h2>
-        </div>
-        <div class="container about-grid">
-          <div class="about-photo reveal">
-            <div class="photo-frame">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Bahlil_Lahadalia_Official_Portrait.png/250px-Bahlil_Lahadalia_Official_Portrait.png" alt="Foto Dito Aditya Pratama" />
-            </div>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Skills</p>
+            <h2>Creative technical strengths</h2>
           </div>
-          <div class="about-content reveal">
-            <p>Saya adalah seorang desainer yang berfokus pada pembuatan visual yang bersih, modern, dan relevan dengan kebutuhan brand maupun bisnis. Saya senang mengolah ide menjadi desain yang tidak hanya menarik secara tampilan, tetapi juga memiliki pesan yang jelas.</p>
-            <p>Dalam setiap project, saya mengutamakan detail, konsistensi, dan pendekatan profesional agar hasil akhir terasa lebih kuat secara visual. Saya terbiasa mengerjakan branding, konten promosi, dan kebutuhan desain digital lainnya.</p>
-            <div class="about-cards">
-              <article class="info-card"><strong>Brand & Visual Design</strong><span>Identitas visual, konten promosi, materi branding</span></article>
-              <article class="info-card"><strong>Digital Creative</strong><span>Social media design, layout, presentasi visual</span></article>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section" id="skills">
-        <div class="container section-heading reveal">
-          <span class="eyebrow">Skills</span>
-          <h2>Keahlian utama yang mendukung proses kreatif dari konsep hingga hasil akhir.</h2>
-        </div>
-        <div class="container skills-grid">
-          <div class="skills-copy reveal"><p>Saya terbiasa mengolah brief menjadi desain yang terstruktur, estetis, dan siap digunakan untuk berbagai kebutuhan promosi maupun identitas visual brand.</p></div>
-          <div class="skills-list">
-            <div class="skill-item reveal"><div class="skill-meta"><span>Graphic Design</span><span>92%</span></div><div class="skill-bar"><span data-width="92%"></span></div></div>
-            <div class="skill-item reveal"><div class="skill-meta"><span>Brand Identity</span><span>88%</span></div><div class="skill-bar"><span data-width="88%"></span></div></div>
-            <div class="skill-item reveal"><div class="skill-meta"><span>Social Media Design</span><span>90%</span></div><div class="skill-bar"><span data-width="90%"></span></div></div>
-            <div class="skill-item reveal"><div class="skill-meta"><span>Layout & Presentation</span><span>85%</span></div><div class="skill-bar"><span data-width="85%"></span></div></div>
+          <div class="skills-grid">
+            <article class="skill-card glass-card reveal">
+              <div class="skill-head"><h3>Creative Coding</h3><span>92%</span></div>
+              <div class="progress-bar"><span data-progress="92"></span></div>
+            </article>
+            <article class="skill-card glass-card reveal reveal-delay-1">
+              <div class="skill-head"><h3>Animation Design</h3><span>89%</span></div>
+              <div class="progress-bar"><span data-progress="89"></span></div>
+            </article>
+            <article class="skill-card glass-card reveal reveal-delay-2">
+              <div class="skill-head"><h3>Interactive Prototyping</h3><span>90%</span></div>
+              <div class="progress-bar"><span data-progress="90"></span></div>
+            </article>
+            <article class="skill-card glass-card reveal">
+              <div class="skill-head"><h3>Frontend Systems</h3><span>86%</span></div>
+              <div class="progress-bar"><span data-progress="86"></span></div>
+            </article>
           </div>
         </div>
       </section>
-      <section class="section" id="projects">
-        <div class="container section-heading reveal">
-          <span class="eyebrow">Projects</span>
-          <h2>Pilihan karya yang menonjolkan kualitas visual, kerapian, dan karakter brand.</h2>
-        </div>
-        <div class="container projects-grid">
-          <article class="project-card reveal"><div class="project-image gradient-a"></div><div class="project-content"><span class="project-tag">Brand Campaign</span><h3>Visual Campaign Launch</h3><p>Desain materi kampanye promosi dengan pendekatan visual modern untuk meningkatkan daya tarik brand.</p></div></article>
-          <article class="project-card reveal"><div class="project-image gradient-b"></div><div class="project-content"><span class="project-tag">Social Media Design</span><h3>Creative Content Series</h3><p>Pembuatan rangkaian desain konten sosial media dengan gaya yang konsisten dan profesional.</p></div></article>
-          <article class="project-card reveal"><div class="project-image gradient-c"></div><div class="project-content"><span class="project-tag">Corporate Branding</span><h3>Identity Presentation Kit</h3><p>Penyusunan identitas visual dan materi presentasi brand untuk membantu bisnis tampil meyakinkan.</p></div></article>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Projects</p>
+            <h2>Interactive showcase</h2>
+          </div>
+          <div class="project-grid">
+            <article class="project-card glass-card reveal">
+              <span class="project-tag">Campaign</span>
+              <h3>Interactive Launch Microsite</h3>
+              <p>Mengembangkan microsite dengan ritme motion yang kuat untuk pengalaman campaign yang lebih imersif.</p>
+            </article>
+            <article class="project-card glass-card reveal reveal-delay-1">
+              <span class="project-tag">Portfolio</span>
+              <h3>Experimental Personal Site</h3>
+              <p>Mengolah layout modular dan hover transitions menjadi portfolio yang lebih memorable dan ekspresif.</p>
+            </article>
+            <article class="project-card glass-card reveal reveal-delay-2">
+              <span class="project-tag">Storytelling</span>
+              <h3>Scroll Narrative Page</h3>
+              <p>Menciptakan halaman presentasi berbasis alur scroll dengan perpindahan visual yang halus dan fokus.</p>
+            </article>
+          </div>
         </div>
       </section>
-      <section class="section" id="contact">
-        <div class="container contact-grid">
-          <div class="contact-copy reveal">
-            <span class="eyebrow">Contact</span>
-            <h2>Mari diskusikan project Anda berikutnya.</h2>
-            <p>Jika Anda membutuhkan desainer untuk branding, materi promosi, atau konten visual digital, saya siap membantu menghadirkan hasil yang modern dan profesional.</p>
-            <div class="contact-links">
-              <a href="mailto:ditoaditya721@gmail.com">ditoaditya721@gmail.com</a>
-              <a href="tel:+6285645817189">0856-4581-7189</a>
-              <a href="https://maps.google.com/?q=Gresik%2C+Indonesia" target="_blank" rel="noreferrer">Gresik, Indonesia</a>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="contact-banner glass-card reveal">
+            <div>
+              <p class="eyebrow">Contact</p>
+              <h2>Open for interactive websites, motion-led pages, and experimental frontend work.</h2>
             </div>
-            <a href="index.html" class="btn btn-back">Back to Home</a>
+            <a class="btn btn-primary" href="mailto:creative@portfoliohub.dev">creative@portfoliohub.dev</a>
           </div>
-          <form class="contact-form reveal" id="contact-form" novalidate>
-            <div class="form-group"><label for="name">Nama</label><input type="text" id="name" name="name" placeholder="Nama Anda" /><small class="error-message"></small></div>
-            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="email@domain.com" /><small class="error-message"></small></div>
-            <div class="form-group"><label for="message">Pesan</label><textarea id="message" name="message" rows="5" placeholder="Ceritakan kebutuhan project Anda"></textarea><small class="error-message"></small></div>
-            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-            <p class="form-status" id="form-status"></p>
-          </form>
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container footer-inner">
-        <p>&copy; 2026 Dito Aditya Pratama. Menciptakan desain yang modern, rapi, dan berkarakter.</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/dito-aditya-pratama" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://www.behance.net/ditoaditya" target="_blank" rel="noreferrer">Behance</a>
-          <a href="https://www.instagram.com/ditoaditya.design" target="_blank" rel="noreferrer">Instagram</a>
-        </div>
-      </div>
-    </footer>
-    <script src="js/script.js"></script>
-  </body>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
 </html>
