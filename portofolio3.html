@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dica Milito Shabana — Portfolio</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Fraunces:ital,wght@1,600;1,700&amp;display=swap" rel="stylesheet">
+  <style>
+  html, body { height: 100%; }
+  body {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    background: #0b0d10;
+    color: #ececec;
+  }
+  .serif-italic { font-family: 'Fraunces', serif; font-style: italic; }
+  .grain::before {
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.06;
+    background-image: radial-gradient(#fff 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+  .blob {
+    position:absolute; border-radius:9999px; filter: blur(80px); opacity:.5; pointer-events:none;
+  }
+  @keyframes floaty { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+  .float { animation: floaty 6s ease-in-out infinite; }
+  @keyframes fadeUp { from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)} }
+  .reveal { animation: fadeUp .8s ease-out both; }
+  .card-hover { transition: all .35s ease; }
+  .card-hover:hover { transform: translateY(-6px); }
+  .marquee { animation: scroll 25s linear infinite; }
+  @keyframes scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+</style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div id="app-wrapper" class="w-full h-full overflow-auto relative"><!-- Decorative blobs -->
+   <div id="blob1" class="blob float" style="width:380px;height:380px;background:#c6ff3d;top:-80px;left:-80px;"></div>
+   <div id="blob2" class="blob float" style="width:320px;height:320px;background:#ff6b6b;top:40%;right:-100px;animation-delay:2s;"></div>
+   <main class="relative max-w-6xl mx-auto px-6 md:px-10 py-10 md:py-14"><!-- NAV -->
+    <header class="flex items-center justify-between mb-16 reveal">
+     <div class="flex items-center gap-3">
+      <div id="logo-badge" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-black" style="background:#c6ff3d">
+       D
+      </div><span class="font-semibold tracking-tight">dica.portfolio</span>
+     </div>
+     <nav class="hidden md:flex gap-8 text-sm text-neutral-400"><a href="#about" class="hover:text-white transition">About</a> <a href="#hobbies" class="hover:text-white transition">Hobbies</a> <a href="#contact" class="hover:text-white transition">Contact</a>
+     </nav>
+    </header><!-- HERO -->
+    <section class="grid md:grid-cols-5 gap-10 items-center mb-28 reveal" style="animation-delay:.1s">
+     <div class="md:col-span-3">
+      <div id="hero-tagline" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-neutral-700 text-xs text-neutral-300 mb-6"><span class="w-2 h-2 rounded-full" style="background:#c6ff3d"></span> <span>Hi, welcome to my world</span>
+      </div>
+      <h1 class="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-6"><span id="hero-name-part1">Dica Milito</span><br><span class="serif-italic font-normal" id="hero-name-part2" style="color:#c6ff3d">Shabana</span></h1>
+      <p id="hero-bio" class="text-lg text-neutral-400 max-w-xl mb-8 leading-relaxed">Seorang pecinta olahraga &amp; gamer. Aku suka tantangan — baik di lapangan maupun di layar.</p>
+      <div class="flex flex-wrap gap-3"><a href="#hobbies" id="cta-primary" class="px-6 py-3 rounded-full font-semibold text-black transition hover:scale-105" style="background:#c6ff3d"> Lihat Hobi → </a> <a href="#contact" id="cta-secondary" class="px-6 py-3 rounded-full font-semibold border border-neutral-600 hover:bg-white hover:text-black transition"> Hubungi Saya </a>
+      </div>
+     </div>
+     <div class="md:col-span-2 flex justify-center">
+      <div class="relative">
+       <div class="w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center text-[9rem] md:text-[11rem] float" style="background:linear-gradient(135deg,#c6ff3d,#7fd100);box-shadow:0 30px 80px rgba(198,255,61,.25)">
+        🎮
+       </div>
+       <div class="absolute -top-4 -right-4 bg-white text-black rounded-2xl px-4 py-2 font-bold shadow-xl rotate-6">
+        ⚽ Bola
+       </div>
+       <div class="absolute -bottom-4 -left-6 bg-[#ff6b6b] text-white rounded-2xl px-4 py-2 font-bold shadow-xl -rotate-6">
+        🏀 Basket
+       </div>
+      </div>
+     </div>
+    </section><!-- MARQUEE -->
+    <div class="overflow-hidden border-y border-neutral-800 py-6 mb-28">
+     <div class="flex marquee whitespace-nowrap text-4xl md:text-5xl font-bold tracking-tight"><span class="mx-8 text-neutral-700">FOOTBALL</span><span class="mx-8 serif-italic" style="color:#c6ff3d">basketball</span> <span class="mx-8 text-neutral-700">VOLLEYBALL</span><span class="mx-8 serif-italic" style="color:#ff6b6b">gaming</span> <span class="mx-8 text-neutral-700">FOOTBALL</span><span class="mx-8 serif-italic" style="color:#c6ff3d">basketball</span> <span class="mx-8 text-neutral-700">VOLLEYBALL</span><span class="mx-8 serif-italic" style="color:#ff6b6b">gaming</span>
+     </div>
+    </div><!-- ABOUT -->
+    <section id="about" class="mb-28 reveal">
+     <div class="grid md:grid-cols-2 gap-10 items-start">
+      <div>
+       <p class="text-sm uppercase tracking-widest text-neutral-500 mb-3">— 01 / About</p>
+       <h2 id="about-title" class="text-4xl md:text-5xl font-bold tracking-tight">Sedikit <span class="serif-italic font-normal" style="color:#c6ff3d">tentang</span> saya</h2>
+      </div>
+      <div>
+       <p id="about-text" class="text-lg text-neutral-300 leading-relaxed">Halo! Aku Dica Milito Shabana. Aku adalah pribadi yang aktif, suka bergerak, dan punya semangat tinggi baik di dunia olahraga maupun dunia digital. Bagi aku, bermain bukan cuma hiburan — tapi juga cara untuk belajar kerja sama tim, strategi, dan mengenal diri sendiri lebih baik.</p>
+       <div class="grid grid-cols-3 gap-4 mt-8">
+        <div class="text-center p-4 rounded-2xl bg-neutral-900 border border-neutral-800">
+         <div class="text-3xl font-bold" style="color:#c6ff3d">
+          4+
+         </div>
+         <div class="text-xs text-neutral-400 mt-1">
+          Cabang olahraga
+         </div>
+        </div>
+        <div class="text-center p-4 rounded-2xl bg-neutral-900 border border-neutral-800">
+         <div class="text-3xl font-bold" style="color:#c6ff3d">
+          ∞
+         </div>
+         <div class="text-xs text-neutral-400 mt-1">
+          Jam bermain game
+         </div>
+        </div>
+        <div class="text-center p-4 rounded-2xl bg-neutral-900 border border-neutral-800">
+         <div class="text-3xl font-bold" style="color:#c6ff3d">
+          100%
+         </div>
+         <div class="text-xs text-neutral-400 mt-1">
+          Semangat
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- HOBBIES -->
+    <section id="hobbies" class="mb-28 reveal">
+     <p class="text-sm uppercase tracking-widest text-neutral-500 mb-3">— 02 / Hobbies</p>
+     <h2 id="hobbies-title" class="text-4xl md:text-5xl font-bold tracking-tight mb-12">Yang aku <span class="serif-italic font-normal" style="color:#c6ff3d">sukai</span></h2>
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="card-hover p-6 rounded-3xl bg-neutral-900 border border-neutral-800 hover:border-[#c6ff3d]">
+       <div class="text-5xl mb-4">
+        ⚽
+       </div>
+       <h3 class="text-xl font-bold mb-2">Sepak Bola</h3>
+       <p class="text-sm text-neutral-400 leading-relaxed">Lari, dribble, dan gol — olahraga favorit yang mengajarkan kerja sama tim.</p>
+      </div>
+      <div class="card-hover p-6 rounded-3xl bg-neutral-900 border border-neutral-800 hover:border-[#ff6b6b]">
+       <div class="text-5xl mb-4">
+        🏀
+       </div>
+       <h3 class="text-xl font-bold mb-2">Basket</h3>
+       <p class="text-sm text-neutral-400 leading-relaxed">Cepat, taktis, dan menantang. Slam dunk is the best feeling!</p>
+      </div>
+      <div class="card-hover p-6 rounded-3xl bg-neutral-900 border border-neutral-800 hover:border-[#c6ff3d]">
+       <div class="text-5xl mb-4">
+        🏐
+       </div>
+       <h3 class="text-xl font-bold mb-2">Voli</h3>
+       <p class="text-sm text-neutral-400 leading-relaxed">Spike dan block adalah bagian paling seru dari permainan ini.</p>
+      </div>
+      <div class="card-hover p-6 rounded-3xl border-2" style="background:linear-gradient(135deg,#c6ff3d,#7fd100);border-color:#c6ff3d;color:#000">
+       <div class="text-5xl mb-4">
+        🎮
+       </div>
+       <h3 class="text-xl font-bold mb-2">Gaming</h3>
+       <p class="text-sm leading-relaxed opacity-80">Dunia digital tempat strategi dan refleks bertemu. Let's play!</p>
+      </div>
+     </div>
+    </section><!-- CONTACT -->
+    <section id="contact" class="mb-16 reveal">
+     <div class="rounded-3xl p-10 md:p-16 text-center relative overflow-hidden" style="background:linear-gradient(135deg,#1a1d21,#0b0d10);border:1px solid #262626">
+      <p class="text-sm uppercase tracking-widest text-neutral-500 mb-3">— 03 / Contact</p>
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">Mau <span class="serif-italic font-normal" style="color:#c6ff3d">main bareng?</span></h2>
+      <p class="text-neutral-400 max-w-xl mx-auto mb-8">Jangan ragu buat ngobrol, main game, atau sekedar tanding olahraga bareng.</p>
+      <div class="flex flex-wrap gap-3 justify-center"><button onclick="showToast()" class="px-6 py-3 rounded-full font-semibold text-black transition hover:scale-105" style="background:#c6ff3d"> <i data-lucide="mail" class="inline w-4 h-4 -mt-1"></i> Say Hi </button> <button onclick="showToast()" class="px-6 py-3 rounded-full font-semibold border border-neutral-600 hover:bg-white hover:text-black transition"> <i data-lucide="instagram" class="inline w-4 h-4 -mt-1"></i> Instagram </button>
+      </div>
+     </div>
+    </section>
+    <footer class="flex flex-col md:flex-row items-center justify-between gap-4 py-8 border-t border-neutral-800 text-sm text-neutral-500">
+     <p id="footer-text">© 2025 Dica Milito Shabana. Made with ❤️ &amp; 🎮</p>
+     <div class="flex gap-4"><a href="#" class="hover:text-white transition">Top ↑</a>
+     </div>
+    </footer>
+   </main><!-- Toast -->
+   <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 px-5 py-3 rounded-full text-black font-semibold opacity-0 pointer-events-none transition-all" style="background:#c6ff3d">
+    Terima kasih sudah mampir! 🎮
+   </div>
+  </div>
+  <script>
+  function showToast(){
+    const t = document.getElementById('toast');
+    t.style.opacity = '1';
+    t.style.transform = 'translateX(-50%) translateY(-10px)';
+    setTimeout(()=>{ t.style.opacity='0'; t.style.transform='translateX(-50%) translateY(0)'; }, 2200);
+  }
+
+  const defaultConfig = {
+    hero_name: "Dica Milito Shabana",
+    hero_tagline: "Hi, welcome to my world",
+    hero_bio: "Seorang pecinta olahraga & gamer. Aku suka tantangan — baik di lapangan maupun di layar.",
+    about_title: "Sedikit tentang saya",
+    about_text: "Halo! Aku Dica Milito Shabana. Aku adalah pribadi yang aktif, suka bergerak, dan punya semangat tinggi baik di dunia olahraga maupun dunia digital. Bagi aku, bermain bukan cuma hiburan — tapi juga cara untuk belajar kerja sama tim, strategi, dan mengenal diri sendiri lebih baik.",
+    hobbies_title: "Yang aku sukai",
+    footer_text: "© 2025 Dica Milito Shabana. Made with ❤️ & 🎮",
+    accent_color: "#c6ff3d",
+    accent_secondary: "#ff6b6b",
+    bg_color: "#0b0d10",
+    surface_color: "#171a1e",
+    text_color: "#ececec",
+    font_family: "Space Grotesk",
+    font_size: 16
+  };
+
+  async function onConfigChange(config){
+    const name = config.hero_name || defaultConfig.hero_name;
+    const parts = name.trim().split(' ');
+    const first = parts.slice(0, Math.max(1, parts.length-1)).join(' ');
+    const last = parts.length > 1 ? parts[parts.length-1] : '';
+    document.getElementById('hero-name-part1').textContent = first;
+    document.getElementById('hero-name-part2').textContent = last;
+
+    document.querySelector('#hero-tagline span:last-child').textContent = config.hero_tagline || defaultConfig.hero_tagline;
+    document.getElementById('hero-bio').textContent = config.hero_bio || defaultConfig.hero_bio;
+    document.getElementById('about-text').textContent = config.about_text || defaultConfig.about_text;
+    document.getElementById('footer-text').textContent = config.footer_text || defaultConfig.footer_text;
+
+    // Titles with italic accent (keep last word italic)
+    const setSplitTitle = (el, text, accent) => {
+      const words = text.trim().split(' ');
+      if(words.length < 2){ el.textContent = text; return; }
+      const last = words.pop();
+      el.innerHTML = `${words.join(' ')} <span class="serif-italic font-normal" style="color:${accent}">${last}</span>`;
+    };
+    setSplitTitle(document.getElementById('about-title'), config.about_title || defaultConfig.about_title, config.accent_color || defaultConfig.accent_color);
+    setSplitTitle(document.getElementById('hobbies-title'), config.hobbies_title || defaultConfig.hobbies_title, config.accent_color || defaultConfig.accent_color);
+
+    // Colors
+    const accent = config.accent_color || defaultConfig.accent_color;
+    const accent2 = config.accent_secondary || defaultConfig.accent_secondary;
+    const bg = config.bg_color || defaultConfig.bg_color;
+    const surf = config.surface_color || defaultConfig.surface_color;
+    const text = config.text_color || defaultConfig.text_color;
+
+    document.body.style.background = bg;
+    document.body.style.color = text;
+    document.getElementById('blob1').style.background = accent;
+    document.getElementById('blob2').style.background = accent2;
+    document.getElementById('logo-badge').style.background = accent;
+    document.getElementById('hero-name-part2').style.color = accent;
+    document.querySelector('#hero-tagline span').style.background = accent;
+    document.getElementById('cta-primary').style.background = accent;
+
+    // Font
+    const font = config.font_family || defaultConfig.font_family;
+    document.body.style.fontFamily = `'${font}', 'Space Grotesk', system-ui, sans-serif`;
+
+    const size = config.font_size || defaultConfig.font_size;
+    document.body.style.fontSize = size + 'px';
+
+    lucide.createIcons();
+  }
+
+  function initElement(){
+    if(!window.elementSdk) return;
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange,
+      mapToCapabilities: (config) => ({
+        recolorables: [
+          { get: () => config.bg_color || defaultConfig.bg_color, set: v => { config.bg_color = v; window.elementSdk.setConfig({bg_color:v}); } },
+          { get: () => config.surface_color || defaultConfig.surface_color, set: v => { config.surface_color = v; window.elementSdk.setConfig({surface_color:v}); } },
+          { get: () => config.text_color || defaultConfig.text_color, set: v => { config.text_color = v; window.elementSdk.setConfig({text_color:v}); } },
+          { get: () => config.accent_color || defaultConfig.accent_color, set: v => { config.accent_color = v; window.elementSdk.setConfig({accent_color:v}); } },
+          { get: () => config.accent_secondary || defaultConfig.accent_secondary, set: v => { config.accent_secondary = v; window.elementSdk.setConfig({accent_secondary:v}); } }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: v => { config.font_family = v; window.elementSdk.setConfig({font_family:v}); }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: v => { config.font_size = v; window.elementSdk.setConfig({font_size:v}); }
+        }
+      }),
+      mapToEditPanelValues: (config) => new Map([
+        ["hero_name", config.hero_name || defaultConfig.hero_name],
+        ["hero_tagline", config.hero_tagline || defaultConfig.hero_tagline],
+        ["hero_bio", config.hero_bio || defaultConfig.hero_bio],
+        ["about_title", config.about_title || defaultConfig.about_title],
+        ["about_text", config.about_text || defaultConfig.about_text],
+        ["hobbies_title", config.hobbies_title || defaultConfig.hobbies_title],
+        ["footer_text", config.footer_text || defaultConfig.footer_text]
+      ])
+    });
+  }
+
+  initElement();
+  lucide.createIcons();
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f2b7dbcb27fc26b',t:'MTc3NzI2ODQxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
