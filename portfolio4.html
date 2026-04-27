@@ -1,0 +1,202 @@
+<!doctype html>
+
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Modern</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: #fff;
+      }
+
+      /* Navbar */
+      nav {
+        position: sticky;
+        top: 0;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        padding: 15px;
+        text-align: center;
+      }
+
+      nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: #ffd369;
+      }
+
+      /* Hero */
+      .hero {
+        text-align: center;
+        padding: 80px 20px;
+        animation: fadeIn 1.5s ease;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .hero p {
+        margin-top: 10px;
+        opacity: 0.8;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #ffd369;
+        color: #333;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: scale(1.1);
+      }
+
+      /* Section */
+      .container {
+        width: 85%;
+        margin: auto;
+        padding: 40px 0;
+      }
+
+      .section {
+        margin-bottom: 50px;
+        animation: fadeInUp 1s ease;
+      }
+
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      /* Card */
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 15px;
+        backdrop-filter: blur(10px);
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 20px;
+        opacity: 0.7;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="#about">Tentang</a>
+      <a href="#projects">Proyek</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+
+    <section class="hero">
+      <h1>Halo, Saya Nama dinda fika aprilia</h1>
+      <p>Frontend Developer | UI Designer</p>
+      <a href="#projects" class="btn">Lihat Proyek</a>
+    </section>
+
+    <div class="container">
+      ```
+      <section id="about" class="section">
+        <h2>Tentang Saya</h2>
+        <div class="card">
+          <p>
+            Saya adalah developer yang fokus membuat website modern, responsif,
+            dan menarik secara visual.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <h2>Proyek</h2>
+
+        <div class="card">
+          <h3>Website Toko Online</h3>
+          <p>Menggunakan HTML, CSS, dan JavaScript.</p>
+        </div>
+
+        <div class="card">
+          <h3>Landing Page Startup</h3>
+          <p>Desain modern dengan animasi interaktif.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Kontak</h2>
+        <div class="card">
+          <p>Email: dindafika686@email.com</p>
+          <p>Instagram: @pikacil04</p>
+        </div>
+      </section>
+      ```
+    </div>
+
+    <footer>
+      <p>© 2026 fika</p>
+    </footer>
+  </body>
+</html>
