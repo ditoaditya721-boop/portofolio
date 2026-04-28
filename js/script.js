@@ -10,6 +10,10 @@ const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
 const themeToggle = document.querySelector(".theme-toggle");
 const parallaxTargets = document.querySelectorAll(".hero-card, .hub-showcase");
+const portfolioPopup = document.getElementById("portfolio-popup");
+const portfolioPopupFrame = document.getElementById("portfolio-popup-frame");
+const portfolioPopupTitle = document.getElementById("portfolio-popup-title");
+const portfolioPopupTriggers = document.querySelectorAll('.page-hub a[href^="portfolio"]');
 
 function updateHeaderState() {
   if (header) {
@@ -155,6 +159,52 @@ function toggleTheme() {
   window.localStorage.setItem("portfolio-theme", mode);
 }
 
+function getPopupTitle(link) {
+  const card = link.closest(".team-card, .cta-block, .footer, .hero-content");
+  const heading = card?.querySelector("h3, h2");
+  return heading?.textContent?.trim() || link.textContent.trim() || "Portfolio Preview";
+}
+
+function openPortfolioPopup(url, title) {
+  if (!portfolioPopup || !portfolioPopupFrame) return;
+  portfolioPopupFrame.src = url;
+  if (portfolioPopupTitle) {
+    portfolioPopupTitle.textContent = title;
+  }
+  portfolioPopup.classList.add("active");
+  portfolioPopup.setAttribute("aria-hidden", "false");
+  body.classList.add("popup-open");
+}
+
+function closePortfolioPopup() {
+  if (!portfolioPopup || !portfolioPopupFrame) return;
+  portfolioPopup.classList.remove("active");
+  portfolioPopup.setAttribute("aria-hidden", "true");
+  portfolioPopupFrame.src = "";
+  body.classList.remove("popup-open");
+}
+
+function initializePortfolioPopup() {
+  if (!portfolioPopup || !portfolioPopupFrame || portfolioPopupTriggers.length === 0) return;
+
+  portfolioPopupTriggers.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      openPortfolioPopup(link.getAttribute("href"), getPopupTitle(link));
+    });
+  });
+
+  portfolioPopup.querySelectorAll("[data-popup-close]").forEach((element) => {
+    element.addEventListener("click", closePortfolioPopup);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && portfolioPopup.classList.contains("active")) {
+      closePortfolioPopup();
+    }
+  });
+}
+
 navToggle?.addEventListener("click", toggleMenu);
 navLinks.forEach((link) => link.addEventListener("click", closeMenu));
 themeToggle?.addEventListener("click", toggleTheme);
@@ -172,3 +222,4 @@ applyStoredTheme();
 updateHeaderState();
 handleParallax();
 initializeTyping();
+initializePortfolioPopup();

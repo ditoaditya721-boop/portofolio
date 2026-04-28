@@ -54,6 +54,10 @@ body {
   overflow-x: hidden;
 }
 
+body.popup-open {
+  overflow: hidden;
+}
+
 img { display: block; width: 100%; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button, input, textarea { font: inherit; }
@@ -425,6 +429,82 @@ button, input, textarea { font: inherit; }
 .social-links a:hover,
 .social-links a:focus-visible { color: var(--title); }
 
+.portfolio-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.portfolio-popup.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.portfolio-popup__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 7, 18, 0.78);
+  backdrop-filter: blur(10px);
+}
+
+.portfolio-popup__dialog {
+  position: relative;
+  width: min(1120px, 100%);
+  height: min(88vh, 860px);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, rgba(13, 23, 48, 0.98), rgba(8, 16, 31, 0.98));
+  box-shadow: var(--shadow);
+}
+
+.portfolio-popup__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.portfolio-popup__header h2 {
+  color: var(--title);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2rem;
+}
+
+.portfolio-popup__close {
+  width: 2.9rem;
+  height: 2.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--title);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.portfolio-popup__close:hover,
+.portfolio-popup__close:focus-visible {
+  transform: translateY(-2px);
+}
+
+.portfolio-popup__frame {
+  width: 100%;
+  height: calc(100% - 4.95rem);
+  border: 0;
+  background: #fff;
+}
+
 .reveal { opacity: 0; transform: translateY(38px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
@@ -474,4 +554,9 @@ button, input, textarea { font: inherit; }
   .hero-card-text { margin-top: 1rem; }
   .hero-card-inner img, .hero-visual { height: 21rem; }
   .footer-inner { flex-direction: column; }
+  .portfolio-popup { padding: 0.75rem; }
+  .portfolio-popup__dialog { height: 85vh; border-radius: 24px; }
+  .portfolio-popup__header { padding: 0.9rem 1rem; }
+  .portfolio-popup__header h2 { font-size: 1rem; }
+  .portfolio-popup__frame { height: calc(100% - 4.7rem); }
 }

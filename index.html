@@ -211,6 +211,36 @@
       </div>
     </footer>
 
+    <div
+      class="portfolio-popup"
+      id="portfolio-popup"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="portfolio-popup-title"
+    >
+      <div class="portfolio-popup__backdrop" data-popup-close></div>
+      <div class="portfolio-popup__dialog">
+        <div class="portfolio-popup__header">
+          <h2 id="portfolio-popup-title">Portfolio Preview</h2>
+          <button
+            class="portfolio-popup__close"
+            type="button"
+            aria-label="Tutup popup portfolio"
+            data-popup-close
+          >
+            &times;
+          </button>
+        </div>
+        <iframe
+          class="portfolio-popup__frame"
+          id="portfolio-popup-frame"
+          title="Portfolio Preview"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+
     <script src="js/script.js"></script>
   </body>
 </html>
